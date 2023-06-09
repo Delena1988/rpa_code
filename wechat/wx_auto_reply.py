@@ -2,18 +2,31 @@ import time
 import pyautogui
 import pyperclip
 
+"""
+1.切换对话框到文件传输助手
+2.识别未读消息(识别空消息跳过，遍历识别1-9条未读消息图片)
+3.双击聊天图标
+4.选择第一个对话框
+5.回复消息
+6.切换对话框到文件传输助手
+"""
 try:
     # 切换对话框到文件传输助手
-    pos_search = pyautogui.locateOnScreen('./search.png')
-    pyautogui.click(pos_search)
-    pyperclip.copy('文件传输助手')
-    pyautogui.hotkey('ctrl', 'v')
-    pyautogui.press('enter')
-    time.sleep(0.5)
-    pyautogui.press('enter')
+    # Mac 版本
+    # pos_search = pyautogui.locateOnScreen('./search.png')
+    # pyautogui.moveTo(pos_search)
+    # pyautogui.moveRel(-30, -65)
+    # pyautogui.click()
+    # time.sleep(1)
+    # pyperclip.copy('文件传输助手')
+    # pyautogui.hotkey('command', 'v')
+    # pyautogui.press('enter')
+    # time.sleep(1)
+    # pyautogui.press('enter')
 
     while True:
         pos = pyautogui.locateOnScreen('./chat-dot0.png')
+        print(pos)
         if pos is not None:
             print("Start : %s" % time.ctime())
             time.sleep(1)
