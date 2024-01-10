@@ -23,4 +23,4 @@ def judgeByHoure():
 # print(calculate_age("2021-03-25"))
 # print(calculate_age("2021-03-25 19:20:39"))
 
-print(getHour())
+print(judgeByHoure())
