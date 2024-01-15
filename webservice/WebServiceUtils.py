@@ -1,5 +1,10 @@
 from suds import client
 
+
+def showMethods(url):
+    return client.Client(url)
+
+
 def callWebService(url, param):
     # 访问url地址返回一个client对象
     web_s = client.Client(url)
@@ -8,8 +13,11 @@ def callWebService(url, param):
     # 获取返回的结果：
     print(res)
 
+
 url = "http://ws.webxml.com.cn/webservices/qqOnlineWebService.asmx?wsdl"
-param = "414236295"
+param = "1827575113"
+
+# print(showMethods(url))
 callWebService("http://ws.webxml.com.cn/webservices/qqOnlineWebService.asmx?wsdl", param)
 
 #
