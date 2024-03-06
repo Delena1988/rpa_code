@@ -11,11 +11,14 @@ RPA开发工具提供的封装组件有限，在实际开发应用中，当组�
 ### CommonUtil
 - 根据出生日期计算年龄 calculate_age(birth_date)
 - 判断时间范围 judgeByHoure
+
 ### WebServiceUtils
 - 查看webservice接口方法 showMethods
 - 调用webservice接口 callWebService
+
 ### pdfToImage
 PDF转图片
+
 ### uploadFile
 上传文件
 
