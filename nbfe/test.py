@@ -30,6 +30,9 @@ def replacLastChar(text, char):
     else:
         return text[:index] + text[index + 1:]
 
+
+
+
 # address = '浙江省宁波市鄞州区钟公庙街道钟公庙社区居门委牌会号'
 address = '浙江省宁波市鄞州区钟公庙街道钟公庙社区居委会'
 address = replacLastChar(address, '号')
