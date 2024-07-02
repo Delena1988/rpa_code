@@ -1,3 +1,18 @@
+from datetime import datetime
+
+
+def months_between(date1_str, date2_str):
+    date1 = datetime.strptime(date1_str, '%Y-%m-%d')
+    date2 = datetime.strptime(date2_str, '%Y-%m-%d')
+
+    years = date2.year - date1.year
+    months = date2.month - date1.month
+    # 如果月份差小于0，则年份需要减去1
+    if months < 0:
+        years -= 1
+        months += 12
+    return 12 * years + months
+
 def 等额本金(贷款金额, 贷款利率, 还款月数):
     剩余贷款本金 = 贷款金额
     每月还款本金 = 贷款金额 / 还款月数
@@ -15,5 +30,9 @@ def 等额本金(贷款金额, 贷款利率, 还款月数):
 # 十年
 # 等额本金(1000000, 3.575, 120)
 #
-#
-等额本金(865000, 3.1, 144 - 45)
+# 20330318
+date1 = '2024-06-18'
+date2 = '2033-03-18'
+print(months_between(date1, date2))
+
+等额本金(780285, 3.1, 93)
