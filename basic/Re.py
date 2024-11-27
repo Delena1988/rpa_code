@@ -66,3 +66,7 @@ it = re.finditer(r"\d+", "12a32bc43jf3")
 for match in it:
     print(match.group())
 print()
+
+print("=============split=============")
+print(re.split('\W+', 'runoob, runoob, runoob.'))
+print(re.split('(\W+)', ' runoob, runoob, runoob.'))
