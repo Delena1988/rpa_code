@@ -33,6 +33,7 @@ print("电话号码是 : ", num)
 print()
 
 text = "abc123def456"
+# 每个分组都可以通过小括号括起来，用于将匹配结果分成多个组，可以通过在group方法中指定分组编号来获取指定分组的匹配结果。
 pattern = re.compile(r'(\d+)(\w+)')
 match = re.search(pattern, text)
 print("text: ", text, "\t", "pattern: ", pattern)
