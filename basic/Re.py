@@ -22,7 +22,7 @@ else:
 print("=============检索和替换=============")
 phone = "2004-959-559 # 这是一个国外电话号码"
 
-print("原号码：",phone)
+print("原号码：", phone)
 # 删除字符串中的 Python注释
 num = re.sub(r'#.*$', "", phone)
 print("电话号码是: ", num)
@@ -30,3 +30,13 @@ print("电话号码是: ", num)
 # 删除非数字(-)的字符串
 num = re.sub(r'\D', "", phone)
 print("电话号码是 : ", num)
+print()
+
+text = "abc123def456"
+pattern = r"(\d+)(\w+)"
+match = re.search(pattern, text)
+print("text: ", text, "\t", "pattern: ", pattern)
+print("groups: ", match.groups())
+print("group0: ", match.group(0))
+print("group1: ", match.group(1))
+print("group2: ", match.group(2))
