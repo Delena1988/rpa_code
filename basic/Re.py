@@ -33,10 +33,18 @@ print("电话号码是 : ", num)
 print()
 
 text = "abc123def456"
-pattern = r"(\d+)(\w+)"
+pattern = re.compile(r'(\d+)(\w+)')
 match = re.search(pattern, text)
 print("text: ", text, "\t", "pattern: ", pattern)
 print("groups: ", match.groups())
 print("group0: ", match.group(0))
 print("group1: ", match.group(1))
 print("group2: ", match.group(2))
+print()
+
+# 从'1'的位置开始匹配，正好匹配
+pattern = re.compile(r'\d+')
+m = pattern.match('one12twothree34four', 3, 10)
+print('start: ', m.start(0))
+print('end: ', m.end(0))
+print('span: ', m.span(0))
