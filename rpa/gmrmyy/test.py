@@ -1,6 +1,6 @@
 import pandas as pd
 
-file_path = '/Users/linjian/PycharmProjects/rpa_code/gmrmyy/三个病区的出院表.xlsx'
+file_path = '/rpa/gmrmyy/三个病区的出院表.xlsx'
 
 raw_data = pd.read_excel(file_path, sheet_name='Sheet1', header=None)
 # print(raw_data)
